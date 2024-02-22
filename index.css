@@ -1,0 +1,223 @@
+:root {
+  --primary-color: rgb(84, 129, 228);
+  --main-text-color: black;
+  --sub-text-color: gray;
+  --section-text-color: white;
+  --bg-color: white;
+  --border-color: lightgray;
+  --footer-color: aliceblue;
+
+  --stat-color1: rgb(84, 129, 228);
+  --stat-color2: rgb(174, 181, 188);
+  --stat-color3: rgb(83, 182, 122);
+  --stat-color4: rgb(76, 159, 181);
+}
+
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  width: 100%;
+  height: 40px;
+  color: var(--section-text-color);
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+
+main {
+  padding: 16px 0px;
+  width: 100%;
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 20px;
+}
+section {
+  width: 96%;
+}
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 12px;
+  background-color: var(--footer-color);
+}
+
+.btn {
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.6;
+}
+.search-container {
+  width: 96%;
+  padding-top: 16px;
+  padding-left: 16px;
+  height: 16%;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.search-container > h1 {
+  font-size: xx-large;
+  margin: 0;
+  font-weight: 900;
+}
+.search-container > span {
+  color: var(--sub-text-color);
+  font-size: medium;
+}
+.search-container > input {
+  width: 98%;
+  height: 36px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  font-size: 16px;
+  padding-left: 12px;
+}
+.info-conatiner {
+  width: 96%;
+  height: 36%;
+  padding-top: 16px;
+  padding-left: 16px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
+}
+.user-img-container {
+  width: 20%;
+}
+.user-img-container > img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border: 1px solid var(--border-color);
+}
+.user-img-container > button {
+  width: 100%;
+  max-width: 260px;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: var(--primary-color);
+  color: var(--section-text-color);
+}
+
+.user-details-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+/* .user-details-container >  */
+.stats-container {
+  width: 96%;
+  /* height: 12%; */
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+}
+.details-container {
+  width: 96%;
+  height: 68%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+.stat {
+  padding: 4px 8px;
+  font-size: small;
+  border-radius: 4px;
+  color: var(--section-text-color);
+  cursor: pointer;
+}
+.stat:nth-child(1) {
+  background-color: var(--stat-color1);
+}
+.stat:nth-child(2) {
+  background-color: var(--stat-color2);
+}
+.stat:nth-child(3) {
+  background-color: var(--stat-color3);
+}
+.stat:nth-child(4) {
+  background-color: var(--stat-color4);
+}
+
+.detail {
+  width: 100%;
+  height: 20%;
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+  /* text-align: center; */
+  /* justify-content: space-between; */
+}
+.detail:last-child {
+  border-bottom: 1px solid var(--border-color);
+}
+.detail > span {
+  /* text-align: center; */
+}
+.repos-container {
+  /* padding: 0; */
+  width: 96%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+}
+.repos-container > h2 {
+  margin-top: 0;
+  font-weight: 900;
+}
+.repos-container > .details-container {
+  width: 100%;
+  margin: 0;
+  height: 80%;
+  row-gap: 8px;
+}
+.repos-container > .details-container > .detail {
+  width: 100%;
+  padding-left: 0;
+  border: 1px solid var(--border-color);
+}
+
+.detail > .stats-container {
+  justify-content: flex-start;
+}
+
+.detail > .repos-name {
+  padding-left: 16px;
+  width: 100%;
+  text-decoration: none;
+}
+.repos-name {
+  color: var(--primary-color);
+  font-weight: 500;
+}
